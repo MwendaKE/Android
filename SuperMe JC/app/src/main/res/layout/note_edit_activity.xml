@@ -1,0 +1,204 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="20dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="EDIT NOTE"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:textColor="@color/colorPrimary"
+			android:layout_marginBottom="20dp" />
+
+		<EditText
+			android:id="@+id/notesTitleEdit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Enter notes title..."
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<com.mwendasoft.superme.helpers.SuperMeMarkupTextEditor
+			android:id="@+id/notesMarkupEditorEdit"
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:hint="Enter your notes..."
+			android:inputType="textMultiLine"
+			android:minLines="3"
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:gravity="top|start"
+			android:layout_marginBottom="10dp"/>
+		
+		<!-- Audio Edit Section -->
+			
+		<LinearLayout
+			android:id="@+id/notesAudioEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:id="@+id/notesAudioTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Audio"
+				android:textStyle="bold"
+				android:layout_marginBottom="5dp"/>
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/notesAudioEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/notesAudioEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add audio..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+
+		<!-- Video Edit Section -->
+			
+		<LinearLayout
+			android:id="@+id/notesVideosEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:id="@+id/notesVideosTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Videos"
+				android:textStyle="bold" 
+				android:layout_marginBottom="5dp"/>
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/notesVideosEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/notesVideoEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add video..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+		
+		<!-- Images Edit Section -->
+			
+		<LinearLayout
+			android:id="@+id/notesImagesEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+			
+			<TextView
+				android:id="@+id/notesImagesTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Images"
+				android:textStyle="bold"
+				android:layout_marginBottom="5dp" />
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/notesImagesEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/notesImageEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add image..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+		
+		<!-- -->
+
+		<CheckBox
+			android:id="@+id/notesImportanceEditCheckbox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Important" />
+
+		<Button
+			android:id="@+id/notesSaveEditBtn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="UPDATE NOTE"
+			android:textColor="@android:color/white"
+			android:background="@drawable/rounded_button_background"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+</ScrollView>
+
+

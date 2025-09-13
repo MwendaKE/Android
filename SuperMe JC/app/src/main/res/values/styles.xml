@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Main app theme -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+		<item name="android:colorPrimary">@color/colorPrimary</item>
+		<item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="android:colorAccent">@color/colorAccent</item>
+	</style>
+
+    <style name="VideoDialogTheme" parent="@android:style/Theme.Holo.Light.Dialog">
+		<!-- Optional customizations -->
+		<item name="android:windowIsFloating">true</item> <!-- default for dialogs -->
+		<item name="android:backgroundDimEnabled">true</item> <!-- dims the background -->
+	</style>
+</resources>

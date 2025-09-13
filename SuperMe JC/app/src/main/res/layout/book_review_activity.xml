@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/bookReviewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+		
+		<!-- Dummy view to absorb initial focus -->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+		
+		<!-- Search Edit -->
+		<EditText
+			android:id="@+id/searchBookReviewEdit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Search your reviews..."
+			android:background="@android:color/transparent"
+			android:padding="10dp"
+			android:textColor="@android:color/black"
+			android:inputType="text" />
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="@color/customBlack"
+			android:layout_marginBottom="10dp"/>
+
+        <!-- ListView -->
+        <ListView
+            android:id="@+id/reviewListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/customDividerColor"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <ImageButton
+        android:id="@+id/editReviewFab"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_edit"
+        android:scaleType="fitCenter"
+        android:elevation="6dp"
+        android:padding="8dp"
+        android:contentDescription="Edit Book" />
+</FrameLayout>

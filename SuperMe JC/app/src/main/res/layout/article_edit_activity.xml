@@ -1,0 +1,120 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="20dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="EDIT ARTICLE"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:textColor="@color/colorPrimary"
+			android:layout_marginBottom="20dp" />
+
+		<EditText
+			android:id="@+id/articleEditTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Enter article title..."
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginBottom="10dp"
+			android:background="@drawable/edit_text_border"
+			android:padding="5dp">
+
+			<Spinner
+				android:id="@+id/articleEditAuthorSpinner"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:background="@android:color/transparent"
+				android:textSize="18sp"
+				android:padding="10dp"/>
+
+			<ImageButton
+				android:id="@+id/articleEditAuthorBtn"
+				android:layout_width="48dp"
+				android:layout_height="48dp"
+				android:background="@android:color/transparent"
+				android:scaleType="fitCenter"
+				android:padding="8dp"
+				android:src="@drawable/ic_add"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginBottom="10dp"
+			android:background="@drawable/edit_text_border"
+			android:padding="5dp">
+
+			<Spinner
+				android:id="@+id/articleEditCategorySpinner"
+				android:layout_width="0dp"
+				android:layout_height="48dp"
+				android:layout_weight="1"
+				android:background="@android:color/transparent"
+				android:textSize="18sp"
+				android:padding="10dp"/>
+
+			<ImageButton
+				android:id="@+id/articleEditCategoryBtn"
+				android:layout_width="48dp"
+				android:layout_height="48dp"
+				android:background="@android:color/transparent"
+				android:scaleType="fitCenter"
+				android:padding="8dp"
+				android:src="@drawable/ic_add"/>
+		</LinearLayout>
+
+		<EditText
+			android:id="@+id/articleEditText"
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:hint="Enter your article body..."
+			android:inputType="textMultiLine"
+			android:minLines="3"
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:gravity="top|start"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<EditText
+			android:id="@+id/articleEditUrl"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:hint="Enter source url.."
+			android:inputType="textUri"
+			android:background="@drawable/edit_text_border"
+			android:textSize="16sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<Button
+			android:id="@+id/articleEditSaveBtn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="UPDATE ARTICLE"
+			android:textColor="@android:color/white"
+			android:background="@drawable/rounded_button_background"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+</ScrollView>
+
+

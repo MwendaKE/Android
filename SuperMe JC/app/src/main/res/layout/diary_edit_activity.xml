@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:padding="20dp"
+		android:orientation="vertical">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="EDIT ENTRY"
+			android:textSize="18sp"
+			android:textStyle="bold"
+			android:textColor="@color/colorPrimary"
+			android:layout_marginBottom="20dp" />
+
+		<EditText
+			android:id="@+id/diaryTitleEdit"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="Add diary title.."
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<EditText
+			android:id="@+id/diaryDateEdit"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:hint="Select date..."
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"
+			android:focusable="false"
+			android:clickable="true" />
+
+		<EditText
+			android:id="@+id/diaryTimeEdit"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:hint="Select time..."
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"
+			android:focusable="false"
+			android:clickable="true" />
+
+		<Spinner
+			android:id="@+id/diaryMoodEditSpinner"
+			android:layout_width="match_parent"
+			android:layout_height="48dp"
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+		
+		<!-- Audio Edit Section -->
+
+		<LinearLayout
+			android:id="@+id/diaryAudioEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:id="@+id/diaryAudioTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Audio"
+				android:textStyle="bold"
+				android:layout_marginBottom="5dp"/>
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/diaryAudioEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/diaryAudioEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add audio..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+
+		<!-- Video Edit Section -->
+
+		<LinearLayout
+			android:id="@+id/diaryVideosEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:id="@+id/diaryVideosTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Videos"
+				android:textStyle="bold" 
+				android:layout_marginBottom="5dp"/>
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/diaryVideosEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/diaryVideoEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add video..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+
+		<!-- Images Edit Section -->
+
+		<LinearLayout
+			android:id="@+id/diaryImagesEditLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:background="@drawable/edit_text_border"
+			android:padding="16dp"
+			android:layout_marginBottom="10dp">
+
+			<TextView
+				android:id="@+id/diaryImagesTextLabel"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Images"
+				android:textStyle="bold"
+				android:layout_marginBottom="5dp" />
+
+			<HorizontalScrollView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:scrollbars="none">
+
+				<LinearLayout
+					android:id="@+id/diaryImagesEditContainer"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:padding="8dp"
+					android:background="#EEEEEE"/>
+			</HorizontalScrollView>
+
+			<EditText
+				android:id="@+id/diaryImageEdit"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="Add image..."
+				android:background="@drawable/edit_text_border"
+				android:textSize="18sp"
+				android:padding="10dp"
+				android:layout_marginBottom="10dp"
+				android:focusable="false"
+				android:clickable="true" />
+		</LinearLayout>
+
+		<!-- -->
+
+		<EditText
+			android:id="@+id/diaryDescriptionEdit"
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			android:hint="What is in your mind today..."
+			android:inputType="textMultiLine"
+			android:minLines="3"
+			android:background="@drawable/edit_text_border"
+			android:textSize="18sp"
+			android:gravity="top|start"
+			android:padding="10dp"
+			android:layout_marginBottom="10dp"/>
+
+		<Button
+			android:id="@+id/diarySaveEditBtn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="UPDATE ENTRY"
+			android:textColor="@android:color/white"
+			android:background="@drawable/rounded_button_background"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+</ScrollView>
+
+

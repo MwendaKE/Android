@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#F5F5F5">
+
+    <!-- Main content container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:background="@android:color/white">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:rowCount="3"
+            android:padding="5dp">
+
+            <!-- All your CheckBoxes (unchanged) -->
+            <CheckBox android:id="@+id/search_all" android:text="All" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_books" android:text="Books" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_notes" android:text="Notes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_quotes" android:text="Quotes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_diary" android:text="Diary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_events" android:text="Events" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_tasks" android:text="Tasks" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_arts" android:text="Articles" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_music" android:text="Music" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_poems" android:text="Poems" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_clips" android:text="Clips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+            <CheckBox android:id="@+id/search_people" android:text="People" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="8dp" android:buttonTint="@color/customMaroon" android:textSize="16sp"/>
+        </GridLayout>
+    </LinearLayout>
+</LinearLayout>

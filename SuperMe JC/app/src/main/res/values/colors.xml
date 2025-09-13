@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Theme Colors -->
+    <color name="colorPrimary">#851414</color>  <!-- Main app color -->
+    <color name="colorPrimaryDark">#6A1010</color>  <!-- Darker shade -->
+    <color name="colorAccent">#A91A1A</color>  <!-- Lighter shade for accents -->
+
+    <!-- Custom Colors -->
+    <color name="customDividerColor">#5E0F0F</color>  <!-- Darker shade for dividers -->
+    <color name="backgroundColor">#F2E5E5</color>  <!-- Light background to contrast -->
+    <color name="textColorPrimary">#FFFFFF</color>  <!-- White text for contrast -->
+    <color name="textColorSecondary">#FFD9D9</color>  <!-- Soft red for secondary text -->
+	
+	<!-- GREEN  -->
+	<color name="customJadeGreen">#00A86B</color> <!-- JADE GREEN -->
+	<color name="customForestGreen">#0B6623</color> <!-- FOREST GREEN -->
+	<color name="customMintGreen">#98FB98</color> <!-- MINT GREEN -->
+	<color name="customNeonGreen">#37FD12</color> <!-- Neon Green -->
+	
+	<!-- YELLOW  -->
+	<color name="customFire">#FCA510</color> <!-- FIRE-->
+	<color name="customTuscany">#FDD128</color> <!-- TUSCANY -->
+	<color name="customOchre">#CC7722</color> <!-- OCHRE -->
+	<color name="customBumblebee">#FBE106</color> <!-- BUMBLEBEE -->
+	<color name="customGold">#F9A603</color> <!-- GOLD -->
+	
+	<!-- Red  -->
+	<color name="customMaroon">#800000</color> <!-- MAROON -->
+	<color name="customChilli">#C21A09</color> <!-- CHILLI -->
+	<color name="customWine">#B11226</color> <!-- WINE -->
+	<color name="customGarnet">#7A2021</color> <!-- GARNET -->
+	<color name="customCandyApple">#FF0800</color> <!-- CANDY APPLE -->
+	<color name="customRust">#8D4004</color> <!-- CANDY APPLE -->
+	
+	
+	<!-- Black -->
+	<color name="customBlack">#000000</color> <!--  -->
+	<color name="customBlackForest">#2C3227</color>
+	<color name="customMidnightBlack">#2B1B17</color> 
+	<color name="customGray">#515151</color> 
+	
+	<!-- Pink -->
+	<color name="customRose">#FF007F</color> <!--  -->
+	<color name="customFuchsia">#FF00FF</color>
+	
+	<!-- Blue -->
+	<color name="customSpace">#1D2951</color> <!-- -->
+	<color name="customTeal">#008081</color>
+	<color name="customNavy">#000080</color> <!-- -->
+	<color name="customYale">#0E4D92</color>
+
+</resources>
+
+<!--
+
+colorPrimary → Main color (#851414)
+
+colorPrimaryDark → Darker shade for toolbar, status bar, etc.
+
+colorAccent → Lighter red for highlights or buttons.
+
+customDividerColor → Slightly darker red for list dividers.
+
+backgroundColor → A very light color to contrast the dark red theme.
+
+textColorPrimary → White for better visibility on dark backgrounds.
+
+textColorSecondary → A softer shade of red for secondary text elements.
+
+-->

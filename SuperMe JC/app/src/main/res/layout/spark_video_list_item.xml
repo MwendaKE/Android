@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
+    android:orientation="horizontal"
+    android:paddingEnd="8dp">
+
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <!-- Thumbnail -->
+        <ImageView
+            android:id="@+id/sparkVideoThumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:background="@color/customBlack" />
+
+        <!-- Play button centered -->
+        <ImageView
+            android:id="@+id/playButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_overlay_play_button"
+            android:visibility="visible" />
+
+        <!-- Delete button -->
+        <ImageButton
+            android:id="@+id/sparkVideoDeleteButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="top|end"
+            android:src="@drawable/ic_close_white"
+            android:background="@drawable/circle_background_maroon"
+            android:contentDescription="Delete"
+            android:visibility="gone"
+            android:padding="4dp"
+            android:layout_margin="4dp"/>
+
+        <!-- Duration bottom right -->
+        <TextView
+            android:id="@+id/videoDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/customMaroon"
+            android:padding="4dp"
+            android:text="00:00" />
+    </FrameLayout>
+
+    <!-- Centered separator view -->
+    <View
+        android:id="@+id/separator"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"  
+        android:background="#33000000" />
+</LinearLayout>

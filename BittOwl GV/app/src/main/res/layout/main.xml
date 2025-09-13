@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:padding="8dp">
+
+    <!-- Equation Scrollable Area -->
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:fillViewport="true">
+
+		<TextView
+			android:id="@+id/txtEquation"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="0"
+			android:textSize="24sp"
+			android:textColor="#000000"
+			android:gravity="end"
+			android:padding="10dp" />
+	</ScrollView>
+
+	<!-- Result Scrollable Area -->
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:fillViewport="true">
+
+		<TextView
+			android:id="@+id/txtResult"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="= 0"
+			android:textSize="26sp"
+			android:textStyle="bold"
+			android:textColor="#2196F3"
+			android:gravity="end"
+			android:padding="10dp" />
+	</ScrollView>
+
+    <!-- Calculator Buttons -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:columnCount="4"
+        android:rowCount="7">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btnSin" style="@style/FunctionButton" android:text="sin"/>
+        <Button android:id="@+id/btnCos" style="@style/FunctionButton" android:text="cos"/>
+        <Button android:id="@+id/btnTan" style="@style/FunctionButton" android:text="tan"/>
+        <Button android:id="@+id/btnPercent" style="@style/OperatorButton" android:text="%"/>
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btnLog" style="@style/FunctionButton" android:text="log"/>
+        <Button android:id="@+id/btnLn" style="@style/FunctionButton" android:text="ln"/>
+        <Button android:id="@+id/btnOpenParen" style="@style/OperatorButton" android:text="("/>
+        <Button android:id="@+id/btnCloseParen" style="@style/OperatorButton" android:text=")"/>
+
+        <!-- Row 3 -->
+		<Button android:id="@+id/btnSquare" style="@style/FunctionButton" android:text="x²"/>
+		<Button android:id="@+id/btnCube" style="@style/FunctionButton" android:text="x³"/>
+		<Button android:id="@+id/btnSqrt" style="@style/FunctionButton" android:text="√"/>
+		<Button android:id="@+id/btnPow" style="@style/OperatorButton" android:text="^"/>
+			
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn7" style="@style/NumberButton" android:text="7"/>
+        <Button android:id="@+id/btn8" style="@style/NumberButton" android:text="8"/>
+        <Button android:id="@+id/btn9" style="@style/NumberButton" android:text="9"/>
+        <Button android:id="@+id/btnDivide" style="@style/OperatorButton" android:text="÷"/>
+
+        <!-- Row 5 -->
+        <Button android:id="@+id/btn4" style="@style/NumberButton" android:text="4"/>
+        <Button android:id="@+id/btn5" style="@style/NumberButton" android:text="5"/>
+        <Button android:id="@+id/btn6" style="@style/NumberButton" android:text="6"/>
+        <Button android:id="@+id/btnMultiply" style="@style/OperatorButton" android:text="×"/>
+
+        <!-- Row 6 -->
+        <Button android:id="@+id/btn1" style="@style/NumberButton" android:text="1"/>
+        <Button android:id="@+id/btn2" style="@style/NumberButton" android:text="2"/>
+        <Button android:id="@+id/btn3" style="@style/NumberButton" android:text="3"/>
+        <Button android:id="@+id/btnMinus" style="@style/OperatorButton" android:text="-"/>
+
+        <!-- Row 7 -->
+        <Button android:id="@+id/btn0" style="@style/NumberButton" android:text="0"/>
+        <Button android:id="@+id/btnClear" style="@style/OperatorButton" android:text="C"/>
+        <Button android:id="@+id/btnPoint" style="@style/OperatorButton" android:text="."/>
+        <Button android:id="@+id/btnPlus" style="@style/OperatorButton" android:text="+"/>
+    </GridLayout>
+
+    <!-- Bottom Row -->
+    <!-- Big Equal Button -->
+	<Button
+		android:id="@+id/btnEqual"
+		style="@style/EqualButton"
+		android:text="="
+		android:layout_width="match_parent"
+		android:layout_height="60dp"
+		android:textSize="28sp"
+		android:padding="8dp"/>
+
+</LinearLayout>

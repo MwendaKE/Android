@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@color/backgroundColor"
+    android:minWidth="200dp"> 
+
+    <!-- Main Play/Pause Button -->
+    <ImageButton
+        android:id="@+id/btnPlayPause"
+        android:layout_width="80dp"  
+        android:layout_height="80dp"
+        android:src="@drawable/ic_audio_play"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:contentDescription="Play/Pause"
+        android:layout_marginBottom="16dp"
+        android:padding="20dp"/>
+
+    <!-- Divider line -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp" 
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Control Buttons Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <!-- Seek Backward Button -->
+        <ImageButton
+            android:id="@+id/btnSeekBack"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_backward"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:contentDescription="Seek backward"
+            android:padding="10dp"
+            android:layout_marginRight="8dp"/>
+
+        <!-- Stop Button -->
+        <ImageButton
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_stop"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:contentDescription="Stop"
+            android:padding="10dp"/>
+
+        <!-- Seek Forward Button -->
+        <ImageButton
+            android:id="@+id/btnSeekForward"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_audio_forward"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:contentDescription="Seek forward"
+            android:padding="10dp"
+            android:layout_marginLeft="8dp"/>
+    </LinearLayout>
+</LinearLayout>

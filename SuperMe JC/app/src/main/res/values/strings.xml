@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- TITLES -->
+    <string name="app_name">SuperMe</string>
+
+    <string name="books">BOOKS</string>
+    <string name="music">MUSIC</string>
+    <string name="quotes">QUOTES</string>
+    <string name="diary">DIARY</string>
+    <string name="diary_entries">DIARY ENTRIES</string>
+    <string name="clips">CLIPS</string>
+    <string name="poems">POEMS</string>
+    <string name="tasks">TASKS</string>
+    <string name="articles">ARTICLES</string>
+    <string name="events">EVENTS</string>
+    <string name="sumrys">SUMRYS</string>
+    <string name="notes">NOTES</string>
+    <string name="people">PEOPLE</string>
+    <string name="sparks">SPARK VIDEOS</string>
+
+    <!-- Add Strings -->
+    <string name="add_book">Add New Book</string>
+    <string name="add_song">Add New Song</string>
+    <string name="add_quote">Add New Quote</string>
+    <string name="add_diary">Add New Entry</string>
+    <string name="add_clip">Add New Clip</string>
+    <string name="add_poem">Add New Poem</string>
+    <string name="add_task">Add New Task</string>
+    <string name="add_article">Add New Article</string>
+    <string name="add_event">Add New Event</string>
+
+    <!-- Author/Writer Strings -->
+    <string name="add_author">Add New Author</string>
+    <string name="add_artist">Add New Artist</string>
+    <string name="add_poet">Add New Poet</string>
+    <string name="add_writer">Add New Writer</string>
+
+    <!-- Category Strings -->
+    <string name="add_genre">Add New Genre</string>
+    <string name="add_category">Add New Category</string>
+
+    <!-- Hint Strings -->
+    <string name="name_hint">Enter name...</string>
+    <string name="category_hint">Enter category name...</string>
+    <string name="title_hint">Enter title...</string>
+    <string name="content_hint">Enter content...</string>
+
+    <!-- Not Found Messages -->
+    <string name="no_books">No books found!</string>
+    <string name="no_songs">No songs found!</string>
+    <string name="no_quotes">No quotes found!</string>
+    <string name="no_diary">No entry found!</string>
+    <string name="no_poems">No poems found!</string>
+    <string name="no_clips">No clips found!</string>
+    <string name="no_tasks">No tasks found!</string>
+    <string name="no_articles">No articles found. Would you like to add a new one?</string>
+    <string name="no_events">No events found!</string>
+    <string name="no_authors">No authors available!</string>
+    <string name="no_writers">No writers available!</string>
+    <string name="no_categories">No categories available!</string>
+
+    <!-- General Actions -->
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="cancel">Cancel</string>
+    <string name="Ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="delete">Delete</string>
+    <string name="open">Open</string>
+
+    <!-- Status Messages -->
+    <string name="content_not_available">Sorry! Content not available!</string>
+    <string name="invalid_details">Invalid details!</string>
+    <string name="author_exists">Author exists!</string>
+    <string name="writer_exists">Writer exists!</string>
+    <string name="category_exists">Category exists!</string>
+    <string name="added_successfully">Added successfully!</string>
+    <string name="updated_successfully">Updated successfully!</string>
+    <string name="deleted_successfully">Deleted successfully!</string>
+
+    <!-- Error Messages -->
+    <string name="adding_error">Error: Adding failed!</string>
+    <string name="editing_error">Error: Editing failed!</string>
+    <string name="deleting_error">Error: Deleting failed!</string>
+    <string name="loading_failed">Error: Loading failed!</string>
+    <string name="error_occurred">An error occurred!</string>
+    <string name="author_not_found">Author not found!</string>
+    <string name="article_not_found">Article not found!</string>
+	<string name="no_articles_found">Articles not found!</string>
+
+    <!-- Validation Messages -->
+    <string name="select_author">Select author</string>
+    <string name="select_writer">Select writer</string>
+    <string name="select_category">Select category</string>
+    <string name="select_valid_author">Select a valid author!</string>
+    <string name="select_valid_writer">Select a valid writer!</string>
+    <string name="select_valid_date">Select a valid date!</string>
+    <string name="select_valid_date_time">Select a valid date and time!</string>
+    <string name="select_valid_category">Select a valid category!</string>
+    <string name="fill_all_fields">Please fill all fields.</string>
+
+    <!-- Confirmation Messages -->
+    <string name="delete_article_confirmation">Are you sure you want to delete \"%s\" article?</string>
+    <string name="delete_confirmation">Are you sure you want to delete this item?</string>
+
+    <!-- Music Section -->
+    <string name="select_genre">Select genre</string>
+    <string name="select_artist">Select artist</string>
+    <string name="no_genres_available">No genres available.</string>
+    <string name="no_artists_available">No artists available.</string>
+    <string name="select_valid_artist">Please select a valid artist.</string>
+    <string name="song_added">Song added successfully!</string>
+    <string name="song_not_added">Error: Failed to add song!</string>
+
+    <string name="edit_artist">Edit Artist</string>
+    <string name="enter_artist_hint">Enter artist name...</string>
+    <string name="enter_genre_hint">Enter genre...</string>
+
+    <string name="artist_exists">Artist already exists!</string>
+    <string name="genre_exists">Genre already exists!</string>
+
+    <!-- Poems Section -->
+    <string name="select_poet">Select poet</string>
+    <string name="no_poets_available">No poets available.</string>
+    <string name="poem_added">Poem added successfully!</string>
+    <string name="poem_not_added">Error: Failed to add poem!</string>
+    <string name="add_poet">Add Poet</string>
+    <string name="edit_poem">Edit Poem</string>
+    <string name="enter_poet_hint">Enter poet name...</string>
+    <string name="poet_exists">Poet already exists!</string>
+
+    <!-- Media Strings -->
+    <string name="add_images">Add Images</string>
+    <string name="add_videos">Add Videos</string>
+    <string name="add_audio">Add Audio</string>
+
+    <!-- New strings for Articles functionality -->
+    <string name="article_title">Article Title</string>
+    <string name="article_content">Content</string>
+    <string name="article_writer">Writer</string>
+    <string name="article_category">Category</string>
+    <string name="article_added">Article added successfully!</string>
+    <string name="article_updated">Article updated successfully!</string>
+    <string name="article_deleted">Article deleted successfully!</string>
+    <string name="error_loading_articles">Error loading articles</string>
+    <string name="error_saving_article">Error saving article</string>
+    <string name="error_updating_article">Error updating article</string>
+    <string name="error_deleting_article">Error deleting article</string>
+	
+	<string name="close">Close</string>
+	<string name="previous">Previous</string>
+	<string name="next">Next</string>
+	
+	<string name="channel_tasks">Tasks</string>
+	<string name="channel_events">Events</string>
+	<string name="channel_tasks_desc">Task reminder.</string>
+	<string name="channel_events_desc">Event reminder.</string>
+	
+	<string name="about_superme_text">
+		About SuperMe&#10;&#10;
+		SuperMe is a personal life manager designed to help you organize and reflect on your world. It has 12 unique sections: Books keeps track of all the books you’ve read and their summaries. Notes stores your text, image, audio, and video notes. Quotes manages quotes from famous people. Events helps you plan and remember events with rich media. Diary captures your life experiences in text, audio, video, and pictures. Tasks helps you manage your to-dos with timing and images. Arts saves and organizes articles from various sources. Sparks stores videos across categories like tech, comedy, and motivation. Music manages lyrics and their audio. Poems keeps your favorite poems in text and image format. Clips saves short excerpts from books. People highlights famous people and their work. SuperMe is your personal space to save, learn, and grow.
+	</string>
+</resources>

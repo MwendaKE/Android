@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "204220966838",
+    "project_id": "bittowl-reports",
+    "storage_bucket": "bittowl-reports.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:204220966838:android:e31ad3982d5f5fa1f0c317",
+        "android_client_info": {
+          "package_name": "com.mwendasoft.bittowl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBahbblFEZe8l9XC40oLkvvkDHd_arKx0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

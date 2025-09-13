@@ -1,0 +1,6 @@
+=> Notifications  for events and tasks (already implemented but took no effect)
+=> Online backup (already implemented GOOGLE DRIVE BACKUP but gave me a lot of errors. Implementation went wrong and is still on the app. Next to do away with Google Drive and implement Firebase for my app backup).
+=> I saw a loading problems. In Sparks. Sparks section takes a little time to open. Possibly because of many videos.
+=> When opening images after editing, if an image was deleted during editing, the image still hangs on the image opener. It still hangs on the list of images in the loaded images. It opens blank.
+
+------MORE------

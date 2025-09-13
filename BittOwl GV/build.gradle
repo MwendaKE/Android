@@ -1,0 +1,36 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        // Add this for legacy Support Library artifacts
+        maven { url 'https://maven.google.com' }
+    }
+    dependencies {
+        // Last stable Gradle plugin for AIDE (3.1.x series)
+        classpath 'com.android.tools.build:gradle:3.1.4'
+
+        // Google Services plugin (updated to last 4.2.x version)
+        classpath 'com.google.gms:google-services:4.2.0'  // Keep this exact version
+        
+        // Add this for better dependency resolution
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1' 
+    }
+}
+
+allprojects {
+    repositories {
+        // Order matters! Google repo first
+        google()
+        jcenter()
+        
+        // Legacy Support Library repo (alternative syntax)
+        maven {
+            url 'https://maven.google.com'
+            content {
+                includeGroup 'com.android.support'
+                includeGroup 'android.arch.lifecycle'
+            }
+        }
+    }
+}

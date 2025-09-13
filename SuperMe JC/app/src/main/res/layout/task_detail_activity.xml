@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:padding="20dp" >
+
+        <TextView
+			android:id="@+id/taskDetailTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="20sp"
+			android:textColor="@color/customRose"
+			android:textStyle="bold"
+			android:gravity="start"
+			android:layout_marginTop="4dp"
+			android:layout_marginBottom="4dp"/>
+
+		<TextView
+			android:id="@+id/taskDateAndTimeView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="18sp"
+			android:textColor="@color/customGray"
+			android:gravity="start"
+			android:paddingVertical="2dp"/>
+
+		<TextView
+			android:id="@+id/taskDueTimeView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="18sp"
+			android:textColor="@color/customJadeGreen"
+			android:gravity="start"
+			android:paddingVertical="2dp" />
+
+        <ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:fillViewport="true">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<!-- Task Detail Text -->
+				<TextView
+					android:id="@+id/taskDetailView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:textSize="18sp"
+					android:textColor="@color/customRust"
+					android:gravity="start"
+					android:padding="10dp"/> <!-- Added padding for better readability -->
+
+				<!-- Images Section -->
+				<LinearLayout
+					android:id="@+id/tasksImageViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="10dp"
+					android:visibility="gone"> <!-- Added visibility gone by default -->
+
+					<TextView
+						android:text="Images"
+						android:textStyle="bold"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp"
+						android:layout_marginBottom="5dp"/>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border">
+
+						<HorizontalScrollView
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:scrollbars="horizontal"
+							android:fillViewport="true">
+
+							<LinearLayout
+								android:id="@+id/taskImageContainer"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:orientation="horizontal"/>
+						</HorizontalScrollView>
+					</LinearLayout>
+				</LinearLayout>
+			</LinearLayout>
+		</ScrollView>
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <ImageButton
+		android:id="@+id/editTaskFab"
+		android:layout_width="72dp"
+		android:layout_height="72dp"
+		android:layout_gravity="bottom|end"
+		android:layout_margin="30dp"
+		android:background="@null"
+		android:src="@drawable/ic_edit"
+		android:scaleType="fitCenter"  
+		android:elevation="6dp"
+		android:padding="8dp"
+		android:contentDescription="Edit Task" />
+</FrameLayout>

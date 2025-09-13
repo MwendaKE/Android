@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mwendasoft.superme">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" 
+        android:required="false" />
+
+    <application
+        android:name=".SuperMeApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:resizeableActivity="true"
+        android:requestLegacyExternalStorage="true">
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Feature Activities (grouped by feature) -->
+        <!-- Books -->
+        <activity android:name=".books.BooksActivity"/>
+        <activity android:name=".books.BookReviewActivity"/>
+        <activity android:name=".books.AddBookActivity"/>
+        <activity android:name=".books.EditBookActivity"/>
+
+		<!-- Search -->
+        <activity android:name=".SearchViewActivity"/>
+			
+		<!-- About -->
+        <activity android:name=".AboutActivity"/>
+		
+		<!-- Authors -->
+        <activity android:name=".authors.AuthorsActivity"/>
+		
+		<!-- Categories -->
+        <activity android:name=".categories.CategoriesActivity"/>
+		
+        <!-- Clips -->
+        <activity android:name=".clips.ClipsActivity"/>
+
+        <!-- Quotes -->
+        <activity android:name=".quotes.QuotesActivity"/>
+
+        <!-- Diaries -->
+        <activity android:name=".diaries.DiaryActivity"/>
+        <activity android:name=".diaries.DiaryDetailActivity"/>
+        <activity android:name=".diaries.DiaryAddActivity"/>
+        <activity android:name=".diaries.DiaryEditActivity"/>
+
+        <!-- Music -->
+        <activity android:name=".music.MusicActivity"/>
+        <activity android:name=".music.SongAddActivity"/>
+        <activity android:name=".music.SongViewActivity"/>
+        <activity android:name=".music.SongEditActivity"/>
+
+        <!-- Poems -->
+        <activity android:name=".poems.PoemActivity"/>
+        <activity android:name=".poems.PoemDetailActivity"/>
+        <activity android:name=".poems.PoemAddActivity"/>
+        <activity android:name=".poems.PoemEditActivity"/>
+
+        <!-- Articles -->
+        <activity android:name=".articles.ArticlesActivity"/>
+        <activity android:name=".articles.ArticleAddActivity"/>
+        <activity android:name=".articles.ArticleDetailActivity"/>
+        <activity android:name=".articles.ArticleEditActivity"/>
+
+        <!-- Events -->
+        <activity android:name=".events.EventsActivity"/>
+        <activity android:name=".events.EventDetailActivity"/>
+        <activity android:name=".events.EventAddActivity"/>
+        <activity android:name=".events.EventEditActivity"/>
+
+        <!-- Tasks -->
+        <activity android:name=".tasks.TasksActivity"/>
+        <activity android:name=".tasks.TaskDetailActivity"/>
+        <activity android:name=".tasks.TaskAddActivity"/>
+        <activity android:name=".tasks.TaskEditActivity"/>
+
+        <!-- Summaries -->
+        <activity android:name=".sumrys.SumrysActivity"/>
+        <activity android:name=".sumrys.SumryDetailActivity"/>
+        <activity android:name=".sumrys.SumryAddActivity"/>
+        <activity android:name=".sumrys.SumryEditActivity"/>
+
+        <!-- Notes -->
+        <activity android:name=".notes.NotesActivity"/>
+        <activity android:name=".notes.NoteAddActivity"/>
+        <activity android:name=".notes.NoteDetailActivity"/>
+        <activity android:name=".notes.NoteEditActivity"/>
+
+        <!-- Sparks -->
+        <activity android:name=".sparks.SparksActivity"/>
+
+        <!-- People -->
+        <activity android:name=".people.PeopleActivity"/>
+        <activity android:name=".people.PeopleDetailActivity"/>
+		
+        <!-- [Other activity groups remain the same...] -->
+
+		<!-- RECEIVERS -->
+        <!-- Receiver for showing reminder notifications -->
+		<receiver 
+			android:name=".reminders.ReminderReceiver"
+			android:exported="true" />
+
+		<!-- Receiver for rescheduling alarms after phone reboot -->
+		<receiver 
+			android:name=".reminders.BootReceiver"
+			android:enabled="true"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="android.intent.action.QUICKBOOT_POWERON" />
+			</intent-filter>
+		</receiver>
+
+        <!-- Services (if any) -->
+        <!-- <service android:name=".services.NotificationService" /> -->
+
+    </application>
+</manifest>

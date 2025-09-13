@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- Search bar -->
+        <LinearLayout
+            android:id="@+id/searchBar"
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="@drawable/search_editext_border"
+			android:layout_marginStart="10dp"
+			android:layout_marginEnd="10dp"
+			android:layout_marginTop="10dp"
+			android:gravity="center_vertical">
+
+            <EditText
+				android:id="@+id/searchInput"
+				android:layout_width="match_parent"
+				android:layout_height="56dp"
+				android:background="@android:color/transparent"
+				android:hint="Filter news..."
+				android:textSize="18sp"
+				android:textColor="@color/blue_1"
+				android:padding="10dp"
+				android:singleLine="true" />
+        </LinearLayout>
+
+        <!-- RecyclerView below the search bar -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/newsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/searchBar"
+            android:layout_above="@id/paginationBar"
+            android:clipToPadding="false"
+            android:padding="4dp" />
+
+        <!-- Pagination bar -->
+        <LinearLayout
+            android:id="@+id/paginationBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:padding="6dp"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/btnPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_left"
+                android:background="@android:color/transparent"
+                android:contentDescription="Previous Page" />
+
+            <TextView
+                android:id="@+id/pageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Page 1"
+                android:textSize="16sp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_right"
+                android:background="@android:color/transparent"
+                android:contentDescription="Next Page" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

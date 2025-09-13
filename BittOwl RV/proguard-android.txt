@@ -1,0 +1,60 @@
+# ==============================================
+# Enhanced AIDE ProGuard Configuration
+# ==============================================
+
+# Basic AIDE requirements
+-dontoptimize
+-dontpreverify
+
+# Android framework essentials
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.Application
+
+# View inflation
+-keepclassmembers class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    void set*(***);
+}
+
+# Support Library 27.x specific
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.** { *; }
+-keep class android.support.v7.** { *; }
+-keep interface android.support.v7.** { *; }
+-keep class android.support.annotation.** { *; }
+
+# Firebase 16.x requirements
+-keep class com.google.firebase.** { *; }
+-keep class com.google.android.gms.** { *; }
+-keepattributes Signature, InnerClasses, Exceptions
+
+# Serializable/Parcelable
+-keepclassmembers class * implements android.os.Parcelable {
+    static ** CREATOR;
+}
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+}
+
+# Native methods and enums
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# Warning suppression (AIDE-specific)
+-dontwarn android.support.**
+-dontwarn com.google.android.gms.**
+-dontwarn com.google.firebase.**
+-dontwarn okio.**
+-dontwarn okhttp3.**

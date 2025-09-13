@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/black">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay Play Button (shown when video is paused) -->
+    <ImageButton
+        android:id="@+id/overlayPlayBtn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:src="@android:drawable/ic_media_play"
+        android:background="@drawable/circle_background_maroon"
+        android:padding="12dp"
+        android:alpha="0.8"
+        android:scaleType="centerInside" />
+
+    <!-- Close Button -->
+	<ImageButton
+		android:id="@+id/btnClose"
+		android:layout_width="40dp"
+		android:layout_height="40dp"
+		android:layout_gravity="top|right"
+		android:layout_margin="16dp"
+		android:background="@drawable/circle_background_maroon"
+		android:src="@drawable/ic_close_white"
+		android:contentDescription="@string/close" />
+
+    <!-- Controls Container -->
+	<LinearLayout
+		android:id="@+id/controlsContainer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="bottom"
+		android:orientation="vertical"
+		android:background="#99000000"
+		android:padding="8dp">
+
+		<!-- Seek Bar -->
+		<SeekBar
+			android:id="@+id/seekBar"
+			android:layout_width="match_parent"
+			android:layout_height="4dp"
+			android:layout_marginLeft="16dp"
+			android:layout_marginRight="16dp"
+			android:max="1000"
+			android:progressDrawable="@drawable/video_seek_bar_maroon"
+			android:thumb="@drawable/video_seekbar_thumb" />
+
+		<!-- Centered Play/Pause and Time Info -->
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:layout_gravity="center_horizontal"
+			android:paddingTop="8dp">
+
+			<ImageButton
+				android:id="@+id/btnPlayPause"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:src="@android:drawable/ic_media_play"
+				android:background="@drawable/circle_background_maroon"/>
+				
+			<TextView
+				android:id="@+id/txtCurrentTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="00:00"
+				android:textColor="@android:color/white"
+				android:layout_marginLeft="8dp" />
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="/"
+				android:textColor="@android:color/white"
+				android:layout_marginLeft="4dp"
+				android:layout_marginRight="4dp" />
+
+			<TextView
+				android:id="@+id/txtTotalTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="00:00"
+				android:textColor="@android:color/white" />
+		</LinearLayout>
+	</LinearLayout>
+</FrameLayout>

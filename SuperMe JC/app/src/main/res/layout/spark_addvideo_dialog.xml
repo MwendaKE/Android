@@ -1,0 +1,33 @@
+<!-- res/layout/dialog_add_videos.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="Add Videos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Spinner
+        android:id="@+id/sparkDialogAddCategorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:padding="10dp"
+		android:background="@drawable/edit_text_border"
+        android:layout_marginBottom="15dp"/>
+
+    <Button
+        android:id="@+id/sparkDialogAddVideosBtn"
+        android:text="Select Videos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+		android:textColor="@android:color/white"
+		android:background="@drawable/rounded_button_background"
+		android:layout_marginTop="15dp"/>
+</LinearLayout>

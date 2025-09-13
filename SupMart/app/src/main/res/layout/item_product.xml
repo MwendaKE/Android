@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <!-- 🔹 Product Code -->
+    <TextView
+        android:id="@+id/productCode"
+        android:text="123456"
+        android:textColor="@color/black_1"
+		android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 🔹 Product Name -->
+    <TextView
+        android:id="@+id/productName"
+        android:text="Product Name"
+		android:textStyle="bold"
+        android:textColor="@color/green_1"
+		android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 🔹 Product Package -->
+    <TextView
+        android:id="@+id/productPackage"
+        android:text="Package: 1kg box"
+        android:textColor="@color/black_2"
+		android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 🔹 Supplier Name -->
+    <TextView
+        android:id="@+id/productSupplier"
+        android:text="Supplier: Norda Industries Ltd"
+        android:textColor="@color/blue_1"
+		android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

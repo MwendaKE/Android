@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:padding="8dp">
+
+    <!-- 🔤 App Title -->
+    <TextView
+        android:id="@+id/actionbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="SupMart"
+        android:textStyle="bold"
+        android:textColor="@color/blue_1"
+        android:gravity="center_vertical"
+        android:textSize="18sp" />
+
+    <!-- 🛒 Product icon and count -->
+    <LinearLayout
+        android:id="@+id/productSection"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/actionbarTitle"
+        android:layout_marginLeft="16dp">
+
+        <ImageView
+            android:id="@+id/productIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_cart"
+            android:contentDescription="Product icon"
+            android:tint="#000000" />
+
+        <TextView
+            android:id="@+id/productCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:paddingLeft="6dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 🧑‍💼 Supplier icon and count -->
+    <LinearLayout
+        android:id="@+id/supplierSection"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_toRightOf="@id/productSection"
+        android:layout_marginLeft="20dp">
+
+        <ImageView
+            android:id="@+id/supplierIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_supplier_2"
+            android:contentDescription="Supplier icon"
+            android:tint="#000000" />
+
+        <TextView
+            android:id="@+id/supplierCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="#000000"
+            android:paddingLeft="6dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 🔄 Switch button (defined FIRST) -->
+    <ImageView
+        android:id="@+id/switchButton"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_switch"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="Switch"
+        android:tint="#000000"
+        android:padding="4dp" />
+
+    <!-- 🔃 Update Icon (placed left of switchIcon) -->
+    <ImageView
+        android:id="@+id/updateIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_update"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/switchButton"
+        android:layout_marginRight="12dp"
+        android:contentDescription="Update icon"
+        android:tint="#000000" />
+</RelativeLayout>

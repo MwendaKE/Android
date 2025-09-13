@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_logo1"
+            android:contentDescription="Logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="App created and managed by:"
+            android:textSize="16sp"
+            android:textColor="@color/black_1"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+		
+		<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erick Mwenda Njagi"
+            android:textSize="16sp"
+            android:textColor="@color/red_1"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+254 7 02 623 729"
+            android:textSize="14sp"
+            android:textColor="@color/green_1"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="erickmwenda256@gmail.com"
+			android:textSize="14sp"
+			android:textColor="#0000EE"
+			android:gravity="center"
+			android:autoLink="email"
+			android:paddingBottom="4dp" />
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="https://MwendaSoft.com"
+			android:textSize="14sp"
+			android:textColor="#0000EE"
+			android:gravity="center"
+			android:autoLink="web"
+			android:paddingBottom="4dp" />
+    </LinearLayout>
+</ScrollView>

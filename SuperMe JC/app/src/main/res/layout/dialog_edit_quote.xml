@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/dialogQuoteEditInput"
+		android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_border"
+        android:gravity="top"
+        android:hint="Quote text..."
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:padding="10dp" />
+	
+	<LinearLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginBottom="10dp"
+		android:background="@drawable/edit_text_border"
+		android:padding="5dp">
+
+		<Spinner
+			android:id="@+id/dialogQuoteEditAuthorSpinner"
+			android:layout_width="0dp"
+			android:layout_height="48dp"
+			android:layout_weight="1"
+			android:background="@android:color/transparent"
+			android:textSize="18sp"
+			android:padding="10dp"/>
+
+		<ImageButton
+			android:id="@+id/dialogEditQuoteAuthorBtn"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:background="@android:color/transparent"
+			android:scaleType="fitCenter"
+			android:padding="8dp"
+			android:src="@drawable/ic_add"/>
+    </LinearLayout>
+</LinearLayout>

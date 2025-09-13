@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Vertical Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<!-- Label -->
+			<TextView
+				android:id="@+id/sparksListTitle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="SPARKS"
+				android:textSize="18sp"
+				android:textStyle="bold"
+				android:textColor="@color/colorPrimary" />
+
+			<!-- Badge -->
+			<TextView
+				android:id="@+id/sparksCountBadge"
+				android:layout_width="32dp"
+				android:layout_height="32dp"
+				android:layout_marginStart="8dp"
+				android:background="@drawable/badge_background"
+				android:textSize="14sp"
+				android:textColor="@android:color/white"
+				android:gravity="center"
+				android:padding="2dp" />
+		</LinearLayout>
+		
+        <!-- Scrollable Sparks Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Brainy & Buzzy (Tech & Science) Videos -->
+				<LinearLayout
+					android:id="@+id/sparksTechSciViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksTechTitle"
+							android:text="Brainy and Buzzy (Tech and Science)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksTechCount"
+							android:text="0"
+							android:layout_width="25dp"
+							android:layout_height="25dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksTechSciRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Heavenly Vibes (Christianity) Videos -->
+				<LinearLayout
+					android:id="@+id/sparksHeavenlyViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksHeavenlyTitle"
+							android:text="Heavenly Vibes (Christianity)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksHeavenlyCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksHeavenlyRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+				</LinearLayout>
+
+                <!-- Mic Drop Moments (Songs) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksMicdropViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksMicrodropTitle"
+							android:text="Mic Drop Moments (Songs)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksMicrodropCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksMicrodropRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Past & Curious (History) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksPastViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksPastTitle"
+							android:text="Past and Curious (History)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksPastCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksPastRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Power Up! (Motivational) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksPowerupViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksPowerupTitle"
+							android:text="Power Up! (Motivational)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksPowerupCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksPowerupRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Just for Laughs (Comedy) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksLaughsViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksLaughsTitle"
+							android:text="Just for Laughs (Comedy)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksLaughsCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksLaughsRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Money Matters (Financial Education) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksMoneyViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksMoneyTitle"
+							android:text="Money Matters (Financial Education)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksMoneyCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksMoneyRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+				<!-- Random Goodies (Other) Videos-->
+				<LinearLayout
+					android:id="@+id/sparksRandomViewLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:layout_marginBottom="20dp">
+					
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:orientation="horizontal"
+						android:gravity="center_vertical"
+						android:layout_marginBottom="12dp">
+
+						<!-- Label -->
+						<TextView
+							android:id="@+id/sparksRandomTitle"
+							android:text= "Random Goodies (Other)"
+							android:textStyle="bold"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:textColor="@color/customForestGreen"/>
+
+						<!-- Badge -->
+						<TextView
+							android:id="@+id/sparksRandomCount"
+							android:text="0"
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_marginStart="8dp"
+							android:background="@drawable/badge_background_green"
+							android:textSize="10sp"
+							android:textColor="@android:color/white"
+							android:gravity="center"
+							android:padding="2dp" />
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="4dp"
+						android:background="@drawable/edit_text_border"
+						android:orientation="vertical">
+
+						<android.support.v7.widget.RecyclerView
+							android:id="@+id/sparksRandomRecycler"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:overScrollMode="never" />
+					</LinearLayout>
+                </LinearLayout>
+				
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- Floating Action Button -->
+    <ImageButton
+        android:id="@+id/addSparkFab"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="30dp"
+        android:background="@null"
+        android:src="@drawable/ic_add"
+        android:scaleType="fitCenter"
+        android:elevation="6dp"
+        android:padding="8dp"
+        android:contentDescription="Add Spark" />
+</FrameLayout>

@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <!-- First row for author name and count badge -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Author Name -->
+        <TextView
+            android:id="@+id/authorNameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textStyle="bold"/>
+
+        <!-- Book Count Badge - stays right next to author name -->
+        <TextView
+            android:id="@+id/authorWorksCountBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/badge_background"
+            android:textSize="11sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:minWidth="24dp"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"/>
+    </LinearLayout>
+
+    <!-- Second row for occupation -->
+    <TextView
+        android:id="@+id/authorOccupationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginTop="2dp"/>
+</LinearLayout>
