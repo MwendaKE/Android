@@ -39,7 +39,7 @@ It is built entirely with **Python** and powered by a **NoSQL MongoDB database**
 
 ---
 
-📈 Future Enhancements
+## 📈 Future Enhancements
 
 🔔 Push notifications for announcements and results
 
@@ -52,7 +52,7 @@ It is built entirely with **Python** and powered by a **NoSQL MongoDB database**
 🧑‍💼 Role-based access (Admin, Teacher, Student, Parent)
 
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License – feel free to use and modify it for your needs.
 

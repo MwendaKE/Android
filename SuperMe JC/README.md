@@ -1,4 +1,9 @@
-**_SuperMe is a personal life manager designed to help you organize and reflect on your world._**
+
+#**SuperMe**
+
+### **_SuperMe **
+
+ ##### A personal life manager designed to help you organize and reflect on your world.
 
 **Books** keeps track of all the books you've read and their summaries.
 

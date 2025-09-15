@@ -1,6 +1,8 @@
-NewSip is a lightweight, mobile-friendly news application designed to keep you updated with the latest global news. It is built with simplicity, speed, and a clean reading experience in mind.
+# NewSip - News App
 
-✨ Features
+A lightweight, mobile-friendly news application designed to keep you updated with the latest global news. It is built with simplicity, speed, and a clean reading experience in mind.
+
+** ✨ Features **
 
 📡 Real-time News – Fetches the latest articles from multiple news sources.
 
@@ -17,7 +19,7 @@ NewSip is a lightweight, mobile-friendly news application designed to keep you u
 🎨 Light Theme – Always-on light theme for a distraction-free experience.
 
 
-🛠 Tech Stack
+** 🛠 Tech Stack **
 
 Language: Java (Support Libraries, no AndroidX)
 
@@ -28,6 +30,6 @@ UI: XML layouts with custom adapters and ListView
 Printing: Android PrintManager (PDF generation)
 
 
-🚀 Why NewSip?
+** 🚀 Why NewSip? **
 
 NewSip is built to be fast, lightweight, and user-friendly – perfect for users who just want the news without bloated features.
