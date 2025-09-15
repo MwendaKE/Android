@@ -1,7 +1,4 @@
-
-#**SuperMe**
-
-### **_SuperMe**
+# **SuperMe**
 
  ### **A personal life manager designed to help you organize and reflect on your world**
 
