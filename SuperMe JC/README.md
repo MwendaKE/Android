@@ -1,9 +1,9 @@
 
 #**SuperMe**
 
-### **_SuperMe **
+### **_SuperMe**
 
- ##### A personal life manager designed to help you organize and reflect on your world.
+ ### **A personal life manager designed to help you organize and reflect on your world**
 
 **Books** keeps track of all the books you've read and their summaries.
 
@@ -29,7 +29,7 @@
 
 **People** highlights renowned people and their work.
 
-**_Generally, SuperMe is your personal space to save, learn, and grow._**
+### **Generally, SuperMe is your personal space to save, learn, and grow.**
 
 NOTE:
 
