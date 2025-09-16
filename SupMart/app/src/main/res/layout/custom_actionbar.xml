@@ -74,19 +74,31 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- 🔄 Switch button (defined FIRST) -->
+    <!-- ℹ️ About Icon (RIGHTMOST) -->
+    <ImageView
+        android:id="@+id/aboutIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_action_info"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="About icon"
+        android:tint="#000000" />
+
+    <!-- 🔄 Switch button (to the LEFT of aboutIcon) -->
     <ImageView
         android:id="@+id/switchButton"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/ic_switch"
-        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@id/aboutIcon"
         android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
         android:contentDescription="Switch"
         android:tint="#000000"
         android:padding="4dp" />
 
-    <!-- 🔃 Update Icon (placed left of switchIcon) -->
+    <!-- 🔃 Update Icon (to the LEFT of switchButton) -->
     <ImageView
         android:id="@+id/updateIcon"
         android:layout_width="24dp"

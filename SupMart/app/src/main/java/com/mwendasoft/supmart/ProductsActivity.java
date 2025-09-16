@@ -22,13 +22,14 @@ import com.mwendasoft.supmart.viewadapters.ProductAdapter;
 
 import java.io.File;
 import java.util.ArrayList;
+import android.app.*;
 
 public class ProductsActivity extends Activity {
 
     private EditText searchInput;
     private RecyclerView recyclerView;
     private TextView productCount, supplierCount;
-    private ImageView switchButton, updateIcon;
+    private ImageView switchButton, updateIcon, aboutIcon;
     private ProductAdapter adapter;
     private ArrayList<Product> productList;
     private DatabaseHelper dbHelper;
@@ -60,6 +61,7 @@ public class ProductsActivity extends Activity {
         supplierCount = findViewById(R.id.supplierCount);
         switchButton = findViewById(R.id.switchButton);
         updateIcon = findViewById(R.id.updateIcon);
+		aboutIcon = (ImageView) findViewById(R.id.aboutIcon);
 
         productCount.setText(String.valueOf(dbHelper.countProducts()));
         supplierCount.setText(String.valueOf(dbHelper.countSuppliers()));
@@ -82,7 +84,14 @@ public class ProductsActivity extends Activity {
 					loadProducts("", false);
 				}
 			});
-
+			
+		aboutIcon.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					showAboutMessage();
+				}
+			});
+		
         searchInput = findViewById(R.id.searchEditText);
         recyclerView = findViewById(R.id.recyclerView);
 
@@ -102,6 +111,24 @@ public class ProductsActivity extends Activity {
 				}
 			});
     }
+	
+	private void showAboutMessage() {
+		// Nice professional dialog
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+		builder.setTitle("About Supmart");
+		builder.setIcon(R.drawable.ic_action_info); // About icon in drawable
+
+		builder.setMessage("Creator: Mwenda E. Njagi\n"
+						   + "Phone: +254 702 623 729\n"
+						   + "Email: erickmwenda256@gmail.com\n"
+						   + "Website: MwendaSoft.com");
+
+		builder.setPositiveButton("OK", null);
+
+		AlertDialog dialog = builder.create();
+		dialog.show();
+	}
 
     private void loadProducts(String keyword, boolean isNumber) {
         productList = dbHelper.getProducts(keyword, isNumber);

@@ -33,7 +33,7 @@ public class SuppliersActivity extends Activity {
     private ArrayList<Supplier> supplierList;
     private DatabaseHelper dbHelper;
     private TextView productCount, supplierCount;
-	private ImageView switchButton, updateIcon;
+	private ImageView switchButton, updateIcon, aboutIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,7 @@ public class SuppliersActivity extends Activity {
         supplierCount = (TextView) findViewById(R.id.supplierCount);
         switchButton = (ImageView) findViewById(R.id.switchButton);
 		updateIcon = (ImageView) findViewById(R.id.updateIcon);
+		aboutIcon = (ImageView) findViewById(R.id.aboutIcon);
 		
         // 🔹 Set counts
         productCount.setText(String.valueOf(dbHelper.countProducts()));
@@ -82,6 +83,13 @@ public class SuppliersActivity extends Activity {
 					loadSuppliers("");
 				}
 			});
+			
+		aboutIcon.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					showAboutMessage();
+				}
+			});
 		
 
         // 🔹 Setup search and RecyclerView
@@ -106,6 +114,24 @@ public class SuppliersActivity extends Activity {
 				}
 			});
     }
+	
+	private void showAboutMessage() {
+		// Nice professional dialog
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+		builder.setTitle("About Supmart");
+		builder.setIcon(R.drawable.ic_action_info); // About icon in drawable
+
+		builder.setMessage("Creator: Mwenda E. Njagi\n"
+						   + "Phone: +254 702 623 729\n"
+						   + "Email: erickmwenda256@gmail.com\n"
+						   + "Website: MwendaSoft.com");
+
+		builder.setPositiveButton("OK", null);
+
+		AlertDialog dialog = builder.create();
+		dialog.show();
+	}
 
     private void loadSuppliers(String keyword) {
 		supplierList = dbHelper.getSuppliers(keyword);
