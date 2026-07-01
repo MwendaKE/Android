@@ -1,0 +1,169 @@
+# Rovizza — Complete Project Report
+
+**Hot Pizza. Fast Delivery.**
+
+---
+
+## Project Overview
+
+### The Problem
+
+Pizza delivery is a logistics challenge disguised as a food business. Orders must flow from customer to kitchen to driver to doorstep in minutes, not hours. Customers expect real-time tracking. Drivers need efficient routing. Restaurants need live order monitoring. Most delivery platforms are either too expensive for independent pizzerias or too basic to handle multi-branch operations.
+
+### The Solution
+
+Rovizza is a complete pizza delivery ecosystem — a mobile-first platform connecting customers, drivers, and restaurants through real-time order management, intelligent delivery logistics, and scalable cloud infrastructure. Three applications work together: a React Native customer app for browsing and ordering, a dedicated driver app for delivery management, and an admin dashboard for restaurant operations. A Flask backend with PostgreSQL, Redis, and Celery powers everything with real-time responsiveness.
+
+### Key Metrics
+
+| Metric | Value |
+|--------|-------|
+| Platform components | 3 applications + backend API |
+| Real-time order states | 8 (placed → delivered) |
+| Payment methods | 4 (card, mobile money, digital wallet, cash) |
+| Infrastructure | Railway, Vercel, Cloudflare |
+| Target restaurants | Single pizzerias to multi-branch chains |
+
+---
+
+## Customer Application
+
+### Pizza Browsing & Discovery
+
+The customer app opens to a dynamic menu with pizza categories, featured items, best sellers, and search. Restaurant browsing supports multi-branch operations. Pizza recommendations adapt based on order history. The interface uses Poppins typography against a Warm Cream (#FFF3E0) background with Premium Pizza Red (#C62828) accents and Cheese Gold (#FFB300) highlights — warm, energetic, and appetizing.
+
+### Customization Engine
+
+Every pizza is customizable. Size selection. Extra toppings with dynamic pricing. Cheese choice. Crust preference. Quantity. Special instructions. The price updates in real time as options change — no surprises at checkout.
+
+### Cart & Checkout
+
+A persistent shopping cart survives app restarts. Real-time totals include delivery fees and tax. Coupon support. Address selection from saved locations. Delivery notes. Estimated delivery time before order placement. Four payment methods: card, mobile money, digital wallet, and cash on delivery. Secure checkout with payment verification and failed payment recovery.
+
+### Real-Time Order Tracking
+
+After checkout, the customer watches their order progress through eight states:
+
+```
+
+Order Placed → Preparing → Baking → Ready for Pickup → Driver Assigned → Out for Delivery → Delivered
+↘ Cancelled
+
+```
+
+Live driver location appears on a map. Push notifications fire at every state change. Estimated arrival updates as the driver approaches. Direct contact with the delivery driver is available throughout.
+
+### Profiles & History
+
+Saved delivery addresses with default selection. Favorite pizzas and restaurants for quick reordering. Complete order history. Profile management with phone number and profile picture.
+
+---
+
+## Driver Application
+
+### Delivery Management
+
+Drivers log in through secure authentication. The app presents a delivery queue — accept or reject incoming orders. Active deliveries show pickup location, drop-off address, and customer contact. Status updates flow back to the customer and restaurant in real time.
+
+### Navigation & Optimization
+
+GPS integration with route navigation. Real-time location updates shared with the customer. Delivery optimization for drivers handling multiple orders.
+
+### Earnings & Performance
+
+Earnings tracking per delivery and per shift. Delivery statistics — completed, distance, time. Payment history. Performance analytics accessible to the driver.
+
+### Availability Control
+
+Online/offline toggle. Availability tracking by shift. Drivers control when they're accepting deliveries.
+
+---
+
+## Admin Dashboard
+
+### Restaurant Management
+
+Multi-branch support. Menu management — add, edit, categorize pizzas. Dynamic pricing updates across branches. Availability management per location.
+
+### Order Operations
+
+Live order monitoring across all branches. Order cancellation with refund processing. Order analytics — volume by hour, day, and location. Delivery monitoring with driver assignment visibility.
+
+### User Administration
+
+Customer management. Driver approval and tracking. Staff roles and permissions. Account suspension and banning.
+
+### Analytics & Marketing
+
+Revenue analytics across branches and time periods. Popular pizza analysis. Peak hour identification. Driver performance metrics. Coupon management and discount campaigns. Featured pizza promotion. Push notification campaigns.
+
+---
+
+## Backend Architecture
+
+### REST API (Flask)
+
+Secure endpoints with JWT authentication. Role-based access control — customer, driver, restaurant staff, admin. Pagination, filtering, and search support. API versioning. Rate limiting on authentication and payment endpoints.
+
+### Database (PostgreSQL)
+
+Tables for orders, users, payments, drivers, restaurants, analytics, reviews, and notifications. Designed for high reliability and strong consistency. Transaction-safe payment processing. Scalable schema supporting multi-branch and multi-restaurant growth.
+
+### Real-Time Operations (Redis + Celery)
+
+Background task processing for notifications, email sending, payment verification, analytics processing, and delivery updates. Redis queues decouple the API from heavy processing. Celery workers handle tasks asynchronously without blocking customer requests.
+
+### Security
+
+JWT authentication with token refresh. Password hashing. Input sanitization against injection. CSRF protection. Rate limiting on sensitive endpoints. Secure payment verification through payment gateway webhooks. Permission-based access control at the endpoint level. HTTPS enforced.
+
+---
+
+## Infrastructure
+
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| Backend | Railway | Flask API + PostgreSQL + Redis + Celery |
+| Frontend | Vercel | Admin dashboard deployment |
+| DNS & CDN | Cloudflare | DNS management, CDN acceleration, SSL, DDoS protection |
+
+---
+
+## Brand Identity
+
+| Element | Specification |
+|---------|--------------|
+| Brand Name | Rovizza |
+| Slogan | Hot Pizza. Fast Delivery. |
+| Primary Color | Premium Pizza Red #C62828 |
+| Background | Warm Cream #FFF3E0 |
+| Dark/Text | Charcoal Black #1E1E1E |
+| Accent | Cheese Gold #FFB300 |
+| Logo Font | Outfit ExtraBold |
+| App Font | Poppins (SemiBold headings, Medium buttons, Regular body) |
+| Logo Style | Stylized "R" with pizza slice curves, rounded edges, speed/motion feel |
+
+---
+
+## Future Roadmap
+
+- AI-powered pizza recommendations
+- Subscription plans for regular customers
+- Loyalty rewards program
+- Smart delivery routing with traffic awareness
+- Multi-language support
+- Voice ordering integration
+- Kitchen management system
+- Inventory management
+- Franchise support for brand expansion
+- International expansion with multi-currency support
+
+---
+
+## Vision
+
+Rovizza aims to become the technology-driven food delivery ecosystem that independent pizzerias and growing chains use to compete with enterprise delivery platforms — combining premium customer experience, efficient restaurant operations, and scalable engineering at a price point that works for local businesses.
+
+---
+
+**Built by MwendaSoft** — Precision Engineering. Reliable Results.

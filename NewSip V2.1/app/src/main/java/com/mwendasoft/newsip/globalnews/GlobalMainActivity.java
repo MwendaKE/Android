@@ -30,7 +30,7 @@ public class GlobalMainActivity extends BaseActivity {
     private final int pageSize = 10;
     private String currentQuery = null;
 
-    private final String API_KEY = "e40e33cd336244b2b45a5d87dca23b58";
+    private final String API_KEY = "API_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
